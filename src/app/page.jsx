@@ -34,7 +34,7 @@ const Home = () => {
 
   return (
     <div className="mb-40">
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8">
+      <div className="grid gap-y-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8 max-w-7xl mx-auto">
         {pokemons?.map((data) => (
           <PokemonCard key={data.name} url={data.url} />
         ))}

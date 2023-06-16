@@ -18,8 +18,8 @@ const PokemonCard = ({ url }) => {
 
   return (
     <Link
-      href="#"
-      className="flex flex-col items-center mx-auto w-[25rem] h-[22rem] rounded-xl hover:shadow-gray-300 shadow-xl transition-all duration-500 ease-in-out hover:-translate-y-3 hover:scale-105 relative"
+      href={`/pokemon/${name}`}
+      className="flex flex-col items-center justify-center mx-auto w-[20rem] h-[21rem] rounded-xl hover:shadow-gray-300 shadow-xl transition-all duration-500 ease-in-out hover:-translate-y-3 hover:scale-105 relative"
       style={{
         background: `linear-gradient(0deg, #fafafa, ${PokemonTypeColor[firstTypeName].light})`,
       }}
@@ -30,13 +30,12 @@ const PokemonCard = ({ url }) => {
       >
         #{id.toString().padStart(3, 0)}
       </p>
-      <div className="">
+      <div className="w-48 h-48 relative">
         <Image
           className="w-auto relative"
           priority
           src={image}
-          width={250}
-          height={300}
+          fill
           alt={name}
         />
       </div>
