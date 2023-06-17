@@ -11,7 +11,7 @@ export const normalizePokemon = ({ pokemon, species, evolution }) => {
       (l) => l.language.name === "en"
     )?.flavor_text,
     species: species.genera.find((l) => l.language.name === "en")?.genus,
-    habitat: species.habitat.name,
+    habitat: species.habitat?.name,
     height: pokemon.height,
     weight: pokemon.weight,
     catchRate: ((species?.capture_rate / 255) * 100).toFixed(1) + "%",

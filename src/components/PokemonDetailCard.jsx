@@ -4,13 +4,14 @@ import Image from "next/image";
 import { ArrowSmallLeftIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import InfoTable from "./InfoTable";
+import PokeChain from "./PokeChain";
 
 const PokemonDetailCard = ({ pokemon }) => {
   const { id, image, name, types, flavorText } = pokemon;
   const firstTypeName = pokemon.types[0].type.name;
 
   return (
-    <div className="flex-col lg:flex-row flex max-w-5xl mt-10 w-full sm:w-2/3 lg:w-auto mx-8 sm:min-w-[32rem] gap-4">
+    <div className="flex-col lg:flex-row flex max-w-5xl my-10 w-full sm:w-2/3 lg:w-auto mx-8 sm:min-w-[32rem] gap-8">
       <div
         className="lg:flex-1 flex flex-col items-center justify-center h-[36rem] rounded-xl relative w-full"
         style={{
@@ -56,8 +57,9 @@ const PokemonDetailCard = ({ pokemon }) => {
             );
           })}
         </div>
-        <p className="font-bold text-lg my-8">{flavorText}</p>
+        <p className="font-semibold text-lg my-8">{flavorText}</p>
         <InfoTable pokemon={pokemon} />
+        <PokeChain pokemon={pokemon} />
       </div>
     </div>
   );

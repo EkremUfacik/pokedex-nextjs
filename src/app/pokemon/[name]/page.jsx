@@ -18,8 +18,6 @@ const Pokemon = async ({ params }) => {
     evolution,
   });
 
-  console.log(pokemon);
-
   return (
     <div className="flex justify-center items-center ">
       <PokemonDetailCard pokemon={pokemon} />
