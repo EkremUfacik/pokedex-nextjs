@@ -1,8 +1,12 @@
+"use client";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Comfortaa } from "next/font/google";
+import { useState } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Comfortaa({
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -10,11 +14,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <html lang="en">
+    <html className={darkMode && "dark"} lang="en">
       <body className={inter.className}>
-        <Navbar />
-        {children}
+        <div className="bg-white dark:bg-violet-950 min-h-screen transition-all duration-300">
+          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+          {children}
+        </div>
       </body>
     </html>
   );

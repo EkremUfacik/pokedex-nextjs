@@ -11,7 +11,7 @@ const PokemonDetailCard = ({ pokemon }) => {
   const firstTypeName = pokemon.types[0].type.name;
 
   return (
-    <div className="flex-col lg:flex-row flex max-w-5xl my-10 w-full sm:w-2/3 lg:w-auto mx-8 sm:min-w-[32rem] gap-8">
+    <div className="flex-col lg:flex-row flex max-w-5xl my-10 w-full sm:w-2/3 lg:w-auto mx-8 sm:min-w-[32rem] gap-8 dark:text-white">
       <div
         className="lg:flex-1 flex flex-col items-center justify-center h-[36rem] rounded-xl relative w-full"
         style={{
@@ -57,7 +57,7 @@ const PokemonDetailCard = ({ pokemon }) => {
             );
           })}
         </div>
-        <p className="font-semibold text-lg my-8">{flavorText}</p>
+        <p className="font-semibold text-lg my-6">{flavorText}</p>
         <InfoTable pokemon={pokemon} />
         <PokeChain pokemon={pokemon} />
       </div>

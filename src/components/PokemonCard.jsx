@@ -19,7 +19,7 @@ const PokemonCard = ({ url }) => {
   return (
     <Link
       href={`/pokemon/${name}`}
-      className="flex flex-col items-center justify-center mx-auto w-[20rem] h-[21rem] rounded-xl hover:shadow-gray-300 shadow-xl transition-all duration-500 ease-in-out hover:-translate-y-3 hover:scale-105 relative"
+      className="flex flex-col items-center justify-center mx-auto w-[20rem] h-[21rem] rounded-xl hover:shadow-gray-300 shadow-xl transition-all duration-500 ease-in-out hover:-translate-y-3 hover:scale-105 relative dark:hover:shadow-black"
       style={{
         background: `linear-gradient(0deg, #fafafa, ${PokemonTypeColor[firstTypeName].light})`,
       }}
