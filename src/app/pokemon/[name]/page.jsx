@@ -1,6 +1,15 @@
 import PokemonDetailCard from "@/components/PokemonDetailCard";
+import { capitalize } from "@/utils/capitalize";
 import getData from "@/utils/getPokemon";
 import { normalizePokemon } from "@/utils/normalizePokemon";
+
+export async function generateMetadata({ params }) {
+  const { name } = params;
+  return {
+    title: capitalize(name),
+    description: `Pokemon - ${name}`,
+  };
+}
 
 const Pokemon = async ({ params }) => {
   const { name } = params;

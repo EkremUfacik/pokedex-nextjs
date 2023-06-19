@@ -21,6 +21,7 @@ const PokeChain = ({ pokemon }) => {
         <Link
           className="hover:-translate-y-1 text-center transition-transform duration-500"
           href={`/pokemon/${chain1.name}`}
+          replace
         >
           <Image
             className="mx-auto"
@@ -37,6 +38,7 @@ const PokeChain = ({ pokemon }) => {
           <Link
             className="hover:-translate-y-1 text-center transition-transform duration-500"
             href={`/pokemon/${chain2.name}`}
+            replace
           >
             <Image
               className="mx-auto"
@@ -55,6 +57,7 @@ const PokeChain = ({ pokemon }) => {
         <Link
           className="hover:-translate-y-1 text-center transition-transform duration-500"
           href={`/pokemon/${chain3.name}`}
+          replace
         >
           <Image
             className="mx-auto"

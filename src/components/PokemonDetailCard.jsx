@@ -4,7 +4,6 @@ import { capitalize } from "@/utils/capitalize";
 import PokemonTypeColor from "@/utils/colors";
 import Image from "next/image";
 import { ArrowSmallLeftIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
 import InfoTable from "./InfoTable";
 import PokeChain from "./PokeChain";
 import { useRouter } from "next/navigation";
