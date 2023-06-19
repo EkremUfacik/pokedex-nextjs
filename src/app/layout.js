@@ -1,8 +1,7 @@
-"use client";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Comfortaa } from "next/font/google";
-import { useState } from "react";
+import Providers from "./providers";
 
 const inter = Comfortaa({
   subsets: ["latin"],
@@ -14,14 +13,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const [darkMode, setDarkMode] = useState(false);
   return (
-    <html className={darkMode && "dark"} lang="en">
+    <html lang="en">
       <body className={inter.className}>
-        <div className="bg-white dark:bg-violet-950 min-h-screen transition-all duration-300">
-          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-          {children}
-        </div>
+        <Providers>
+          <div className="bg-white dark:bg-violet-950 min-h-screen transition-all duration-300">
+            <Navbar />
+            {children}
+          </div>
+        </Providers>
       </body>
     </html>
   );

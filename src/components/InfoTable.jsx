@@ -1,3 +1,4 @@
+import { capitalize } from "@/utils/capitalize";
 import React from "react";
 
 const InfoTable = ({ pokemon }) => {
@@ -5,27 +6,29 @@ const InfoTable = ({ pokemon }) => {
 
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table className="w-full text-sm text-left text-gray-400 dark:text-gray-400 transition-all duration-500">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-indigo-950 dark:text-gray-300 transition-all duration-300">
-          <tr>
+      <table className="w-full text-sm text-left">
+        <thead>
+          <tr className="bg-gray-200 dark:bg-indigo-950 transition-all duration-300">
             <th
               scope="col"
               colSpan={2}
-              className="p-2 text-xl tracking-wider text-center"
+              className="p-2 text-xl uppercase tracking-wider text-center dark:text-gray-300 text-gray-700"
             >
               Pokemon Info
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr className="border-b bg-gray-50 dark:bg-blue-950 dark:border-blue-950 transition-all duration-300">
+          <tr className="border-b bg-gray-50 dark:bg-blue-950 dark:border-blue-950 transition-all duration-300 ">
             <th
               scope="row"
               className="px-6 py-4 font-bold text-gray-900 whitespace-nowrap dark:text-white"
             >
               Species
             </th>
-            <td className="px-6 py-4">{species}</td>
+            <td className="px-6 py-4 text-gray-600 dark:text-gray-300">
+              {species}
+            </td>
           </tr>
           <tr className="bg-white border-b dark:bg-blue-900 dark:border-blue-950 transition-all duration-300">
             <th
@@ -34,7 +37,9 @@ const InfoTable = ({ pokemon }) => {
             >
               Habitat
             </th>
-            <td className="px-6 py-4">{habitat}</td>
+            <td className="px-6 py-4 text-gray-600 dark:text-gray-300">
+              {capitalize(habitat)}
+            </td>
           </tr>
           <tr className="border-b bg-gray-50 dark:bg-blue-950 dark:border-blue-950 transition-all duration-300">
             <th
@@ -43,7 +48,9 @@ const InfoTable = ({ pokemon }) => {
             >
               Height
             </th>
-            <td className="px-6 py-4">{height}</td>
+            <td className="px-6 py-4 text-gray-600 dark:text-gray-300">
+              {height}
+            </td>
           </tr>
           <tr className="bg-white border-b dark:bg-blue-900 dark:border-blue-950 transition-all duration-300">
             <th
@@ -52,7 +59,9 @@ const InfoTable = ({ pokemon }) => {
             >
               Weight
             </th>
-            <td className="px-6 py-4">{weight}</td>
+            <td className="px-6 py-4 text-gray-600 dark:text-gray-300">
+              {weight}
+            </td>
           </tr>
           <tr className="border-b bg-gray-50 dark:bg-blue-950 dark:border-blue-950 transition-all duration-300">
             <th
@@ -61,7 +70,9 @@ const InfoTable = ({ pokemon }) => {
             >
               Catch Rate
             </th>
-            <td className="px-6 py-4">{catchRate}</td>
+            <td className="px-6 py-4 text-gray-600 dark:text-gray-300">
+              {catchRate}
+            </td>
           </tr>
         </tbody>
       </table>

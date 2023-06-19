@@ -3,8 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { MoonIcon } from "@heroicons/react/24/outline";
 import { SunIcon } from "@heroicons/react/24/outline";
+import { useTheme } from "next-themes";
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+const Navbar = () => {
+  const { theme, setTheme } = useTheme();
+  // const currentTheme = theme === "system" ? systemTheme : theme;
+
   return (
     <>
       <div className="h-24"></div>
@@ -22,9 +26,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
         <div
           className="hover:bg-slate-300 p-2 rounded-full cursor-pointer transition-all duration-300"
-          onClick={() => setDarkMode(!darkMode)}
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
-          {darkMode ? (
+          {theme === "light" ? (
             <SunIcon className="w-8 text-yellow-600" />
           ) : (
             <MoonIcon className="w-8 text-gray-500" />

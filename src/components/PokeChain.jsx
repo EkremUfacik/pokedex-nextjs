@@ -19,7 +19,7 @@ const PokeChain = ({ pokemon }) => {
     <div className="flex justify-center gap-4 mt-4">
       <div className="flex gap-4">
         <Link
-          className="hover:-translate-y-1 transition-all duration-500 text-center"
+          className="hover:-translate-y-1 text-center transition-transform duration-500"
           href={`/pokemon/${chain1.name}`}
         >
           <Image
@@ -35,7 +35,7 @@ const PokeChain = ({ pokemon }) => {
       {chain2 && (
         <div className="flex gap-4">
           <Link
-            className="hover:-translate-y-1 transition-all duration-500 text-center"
+            className="hover:-translate-y-1 text-center transition-transform duration-500"
             href={`/pokemon/${chain2.name}`}
           >
             <Image
@@ -53,7 +53,7 @@ const PokeChain = ({ pokemon }) => {
 
       {chain3 && (
         <Link
-          className="hover:-translate-y-1 transition-all duration-500 text-center"
+          className="hover:-translate-y-1 text-center transition-transform duration-500"
           href={`/pokemon/${chain3.name}`}
         >
           <Image
