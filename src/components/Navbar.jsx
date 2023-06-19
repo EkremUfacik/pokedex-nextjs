@@ -28,7 +28,7 @@ const Navbar = () => {
           className="hover:bg-slate-300 p-2 rounded-full cursor-pointer transition-all duration-300"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
-          {theme === "light" ? (
+          {theme === "dark" ? (
             <SunIcon className="w-8 text-yellow-600" />
           ) : (
             <MoonIcon className="w-8 text-gray-500" />
