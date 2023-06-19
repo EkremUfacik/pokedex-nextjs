@@ -43,10 +43,11 @@ const PokemonCard = ({ url }) => {
         {capitalize(name)}
       </p>
       <div className="flex justify-center gap-4 mt-4 ">
-        {types.map((t) => {
+        {types.map((t, index) => {
           const typeName = t.type.name;
           return (
             <p
+              key={index}
               className="px-3 py-1 rounded-lg text-white uppercase text-sm font-semibold"
               style={{
                 backgroundColor: PokemonTypeColor[typeName].medium,
