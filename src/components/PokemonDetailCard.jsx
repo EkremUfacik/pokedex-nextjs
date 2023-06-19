@@ -1,3 +1,5 @@
+"use client";
+
 import { capitalize } from "@/utils/capitalize";
 import PokemonTypeColor from "@/utils/colors";
 import Image from "next/image";
@@ -5,10 +7,12 @@ import { ArrowSmallLeftIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import InfoTable from "./InfoTable";
 import PokeChain from "./PokeChain";
+import { useRouter } from "next/navigation";
 
 const PokemonDetailCard = ({ pokemon }) => {
   const { id, image, name, types, flavorText } = pokemon;
   const firstTypeName = pokemon.types[0].type.name;
+  const router = useRouter();
 
   return (
     <div className="flex-col lg:flex-row flex max-w-5xl my-10 w-full sm:w-2/3 lg:w-auto mx-8 sm:min-w-[32rem] gap-8 dark:text-white">
@@ -36,9 +40,9 @@ const PokemonDetailCard = ({ pokemon }) => {
             alt={name}
           />
         </div>
-        <Link href="/">
+        <div className="cursor-pointer" onClick={() => router.back()}>
           <ArrowSmallLeftIcon className="w-8 text-white absolute top-5 left-4 hover:text-slate-600 hover:left-3 transition-all duration-400 " />
-        </Link>
+        </div>
       </div>
 
       <div className="lg:flex-1 self-center">
