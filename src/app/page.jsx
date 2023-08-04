@@ -47,6 +47,7 @@ const Home = () => {
             height={100}
             className="animate-spin mx-auto"
             src={loadBall}
+            alt="load"
           />
         </div>
       )}

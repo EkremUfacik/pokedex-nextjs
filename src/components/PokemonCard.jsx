@@ -36,6 +36,7 @@ const PokemonCard = ({ url }) => {
           priority
           src={image}
           fill
+          sizes="100%"
           alt={name}
         />
       </div>
